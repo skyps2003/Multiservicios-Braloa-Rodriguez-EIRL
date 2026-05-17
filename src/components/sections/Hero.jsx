@@ -1,107 +1,119 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { siteContent } from '../../data/siteContent';
-import { ChevronRight, ArrowDown } from 'lucide-react';
+import { ChevronRight, Clock, CheckCircle2, Users, Award, Sparkles, Shield, HardHat } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-40 pb-12 overflow-hidden bg-slate-50 dark:bg-slate-950">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-2/3 h-full bg-apple-green/5 dark:bg-apple-green/5 -skew-x-12 transform translate-x-1/4 hidden lg:block" />
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-baby-purple/20 dark:bg-apple-green/10 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-apple-green/20 dark:bg-baby-purple/10 rounded-full blur-[100px] animate-float-delayed" />
-
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-apple-green/10 dark:bg-apple-green/20 text-apple-green font-bold text-xs mb-8 tracking-[0.2em] uppercase"
+    <>
+      <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-700">
+        
+        {/* Background Image Layer - Fixed Alignment */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent z-10" />
+          <motion.div 
+            initial={{ scale: 1.05, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            className="absolute right-0 top-0 w-full lg:w-[60%] h-full overflow-hidden"
           >
-            <span className="w-2 h-2 rounded-full bg-apple-green animate-pulse" />
-            Excelencia en Construcción
-          </motion.div>
-          <h1 className="text-5xl md:text-8xl font-black text-slate-900 dark:text-white leading-[0.9] mb-8 tracking-tighter">
-            Creamos <span className="relative">
-              <span className="text-apple-green italic">estructuras</span>
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-apple-green/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="4" />
-              </svg>
-            </span> <br className="hidden md:block" /> de confianza
-          </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-xl leading-relaxed font-light">
-            Especialistas en ingeniería civil y soluciones integrales para proyectos que trascienden generaciones en San Juan de Marcona.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#servicios"
-              className="px-8 py-4 bg-apple-green text-white rounded-xl font-bold shadow-lg shadow-apple-green/20 flex items-center justify-center gap-2"
-            >
-              Nuestros Servicios
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#contacto"
-              className="px-8 py-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-xl font-bold flex items-center justify-center gap-2"
-            >
-              Contactar Ahora
-            </motion.a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="relative"
-        >
-          <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] dark:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)]">
-            <img
-              src="/img/hero.jpg"
-              alt="Obra de calidad"
-              className="w-full h-auto object-cover aspect-[4/5] lg:aspect-square hover:scale-105 transition-transform duration-1000"
+            <img 
+              src="/img/about/EXPERIENCIA.png" 
+              alt="Infraestructura Braloa" 
+              className="w-full h-full object-cover grayscale-[20%] dark:grayscale-[50%] brightness-110 dark:brightness-50 transition-all duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/40 via-transparent to-transparent" />
-          </div>
-
-          {/* Finer Decorative Card */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-8 -right-4 md:-bottom-12 md:-right-8 p-6 md:p-8 z-20 rounded-[2rem] bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-700/30 shadow-2xl shadow-black/10"
-          >
-            <div className="flex items-center gap-5">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-apple-green blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
-                <div className="relative w-16 h-16 bg-gradient-to-br from-apple-green to-[#6DA32D] rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-apple-green/30 border border-white/20">
-                  7+
-                </div>
-              </div>
-              <div>
-                <p className="font-display font-extrabold text-xl md:text-2xl text-slate-900 dark:text-white leading-none tracking-tight">Años de Éxito</p>
-                <div className="flex items-center gap-2 mt-2">
-                  <span className="w-2 h-2 rounded-full bg-apple-green" />
-                  <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Marcona, Perú</p>
-                </div>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-white/5 dark:bg-slate-950/10 backdrop-blur-[1px]" />
           </motion.div>
-        </motion.div>
-      </div>
+        </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-400 dark:text-slate-600 animate-bounce cursor-pointer">
-        <ArrowDown size={32} />
-      </div>
-    </section>
+        <div className="content-width relative z-20 w-full">
+          <div className="max-w-4xl -ml-1 md:-ml-2">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-apple-green/10 dark:bg-apple-green/20 border border-apple-green/20 text-apple-green font-black text-[9px] tracking-[0.4em] mb-12 uppercase shadow-sm"
+            >
+              <div className="size-1.5 bg-apple-green rounded-full animate-pulse" />
+              Corporación Multiservicios Braloa
+            </motion.div>
+            
+            <motion.h1 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-slate-900 dark:text-white leading-[1.05] mb-10 tracking-tighter"
+            >
+              Conectamos desarrollo, <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-apple-green to-emerald-600 glow-text-green">
+                construimos futuro.
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-2xl text-slate-600 dark:text-slate-300 mb-16 max-w-2xl leading-relaxed font-medium"
+            >
+              En <span className="text-slate-900 dark:text-white font-black">Braloa Rodriguez E.I.R.L.</span>, impulsamos el crecimiento regional mediante soluciones integrales en ingeniería y gestión estratégica, orientadas a resultados sostenibles.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-wrap gap-6"
+            >
+              <Link
+                to="/contacto"
+                className="px-12 py-6 bg-apple-green text-white rounded-2xl font-black shadow-2xl shadow-apple-green/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-4 tracking-[0.2em] text-[10px] uppercase group"
+              >
+                Cotizar Servicio
+                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/nosotros"
+                className="px-12 py-6 bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10 rounded-2xl font-black flex items-center justify-center gap-4 tracking-[0.2em] text-[10px] uppercase hover:bg-slate-200 dark:hover:bg-white/10 transition-all backdrop-blur-md shadow-xl"
+              >
+                Conocer Más
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS BAR - UPDATED WITH BRALOA DATA */}
+      <section className="bg-slate-900 dark:bg-slate-950 py-20 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-apple-green/5 via-transparent to-blue-600/5 pointer-events-none" />
+        <div className="content-width">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-0">
+            {siteContent.stats.map((stat, i) => {
+              const icons = { Award, Sparkles, Clock, Users, Shield, HardHat, CheckCircle2 };
+              const Icon = icons[stat.icon] || Award;
+              
+              return (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`flex flex-col items-center text-center px-10 ${i < 3 ? 'lg:border-r lg:border-white/10' : ''}`}
+                >
+                  <div className="size-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-apple-green mb-10 shadow-2xl group hover:bg-apple-green hover:text-white transition-all duration-500">
+                    <Icon size={32} className="group-hover:scale-110 transition-transform" />
+                  </div>
+                  <p className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter leading-none">{stat.value}</p>
+                  <p className="text-[11px] font-black text-slate-400 uppercase tracking-[0.3em]">{stat.label}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

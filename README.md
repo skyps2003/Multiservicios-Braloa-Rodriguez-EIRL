@@ -13,20 +13,27 @@ Una experiencia digital imponente diseñada para **Multiservicios Braloa Rodrigu
 
 Este proyecto representa la identidad digital de Braloa Rodriguez EIRL. No es solo una web informativa, sino una herramienta de branding diseñada para proyectar **confianza, solidez y precisión**. 
 
-Utilizando una estética "fina" y minimalista, la plataforma ofrece una navegación fluida que guía al usuario a través de los servicios especializados de la empresa, desde obras civiles hasta soluciones en Drywall y Aluzinc.
+Utilizando una estética "fina", moderna y minimalista, la plataforma ofrece una navegación fluida que guía al usuario a través de los servicios especializados de la empresa, desde obras civiles hasta soluciones en Drywall y Aluzinc.
 
-## 🚀 Características Principales
+## 🚀 Características Principales e Innovaciones Recientes
 
-*   **⚡ Arquitectura React 19:** Rendimiento optimizado con la última versión del ecosistema React.
+*   **⚡ Arquitectura React 19:** Rendimiento optimizado con la última versión del ecosistema React y carga instantánea.
 *   **🌓 Sistema de Temas Dinámico:** Un interruptor de tema (Día/Noche) totalmente personalizado con los colores corporativos (Apple Green & Baby Purple).
+*   **🛡️ Páginas de Políticas HSEQ Dedicadas:** 4 subpáginas institucionales individuales cargadas de datos reales, estándares legales (como la Ley N° 29783) y footer para cotizaciones:
+    *   **Seguridad y Salud (SGSST):** Enfoque riguroso en prevención de riesgos y cultura laboral segura.
+    *   **Calidad:** Compromisos de satisfacción garantizada y procesos certificados.
+    *   **Medio Ambiente:** Mitigación ecoeficiente y cumplimiento ecológico.
+    *   **Responsabilidad Social:** Bienestar ético interno y apoyo a la comunidad de Marcona.
+*   **🤝 Alianzas y Clientes Transparentes:** Sección "Empresas que Confían en Nosotros" optimizada sin tarjetas (cards) toscas. Los logos flotan de forma limpia y minimalista, con micro-interacciones hover a todo color y despliegue de especialidades.
+*   **📍 Contacto Premium de 2 Columnas:** El mapa interactivo se integró directamente debajo de la **Dirección Base** en la columna de datos del cliente, balanceando la interfaz de forma simétrica junto al formulario de requerimientos vía WhatsApp.
 *   **🎭 Animaciones "God-Tier":** Micro-interacciones suaves impulsadas por Framer Motion que elevan la percepción de calidad.
 *   **📱 Diseño Ultra-Responsivo:** Experiencia perfecta desde smartphones hasta monitores UltraWide.
-*   **🏗️ Branding Cohesivo:** Uso estratégico de tipografías Montserrat y Poppins para un equilibrio entre autoridad y legibilidad.
 *   **🛠️ Tech Stack Moderno:** Tailwind CSS 4.0 para una estilización eficiente y Lucide React para iconografía vectorial limpia.
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **Frontend:** React 19 + Vite
+- **Navegación:** React Router v7
 - **Estilos:** Tailwind CSS v4.0
 - **Animaciones:** Framer Motion
 - **Iconografía:** Lucide React
@@ -50,7 +57,7 @@ Utilizando una estética "fina" y minimalista, la plataforma ofrece una navegaci
    npm run dev
    ```
 
-4. **Construir para producción:**
+4. **Construir para producción (Verificado sin errores):**
    ```bash
    npm run build
    ```
