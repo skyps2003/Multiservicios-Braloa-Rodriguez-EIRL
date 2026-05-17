@@ -28,20 +28,22 @@ const Footer = () => {
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-10 font-medium">
               Elevando los estándares de la ingeniería en Marcona con un compromiso inquebrantable hacia la calidad y la seguridad.
             </p>
-            <div className="flex gap-5">
+            <div className="flex flex-wrap gap-4">
               <a 
                 href={siteContent.contact.facebook} 
                 target="_blank" 
                 rel="noreferrer" 
-                className="size-12 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-white/5 flex items-center justify-center text-slate-400 hover:text-apple-green hover:border-apple-green transition-all"
+                className="btn-digital bg-[#1877F2] text-white py-3.5 px-6 gap-3 text-[10px] tracking-widest uppercase font-black"
               >
-                <Facebook size={20} />
+                Facebook
+                <Facebook size={16} className="transition-transform duration-300" />
               </a>
               <a 
                 href={`mailto:${siteContent.contact.email}`}
-                className="size-12 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-white/5 flex items-center justify-center text-slate-400 hover:text-apple-green hover:border-apple-green transition-all"
+                className="btn-digital bg-apple-green text-white py-3.5 px-6 gap-3 text-[10px] tracking-widest uppercase font-black"
               >
-                <Mail size={20} />
+                Escríbenos
+                <Mail size={16} className="transition-transform duration-300" />
               </a>
             </div>
           </div>

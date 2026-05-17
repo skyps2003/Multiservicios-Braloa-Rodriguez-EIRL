@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { Download, Loader2, CheckCircle2 } from 'lucide-react';
 import { siteContent } from '../../data/siteContent';
 
 const Brochure = () => {
+  const [downloadStatus, setDownloadStatus] = useState('idle'); // idle, downloading, success
+
+  const handleDownload = (e) => {
+    e.preventDefault();
+    if (downloadStatus !== 'idle') return;
+
+    setDownloadStatus('downloading');
+
+    // Simulate high-end progress loading
+    setTimeout(() => {
+      setDownloadStatus('success');
+      
+      // Trigger actual download programmatically
+      const link = document.createElement('a');
+      link.href = siteContent.contact.brochureUrl;
+      link.download = 'Brochure_Braloa_2026.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Reset after a couple of seconds
+      setTimeout(() => {
+        setDownloadStatus('idle');
+      }, 4000);
+    }, 2000);
+  };
+
   return (
     <section className="section-spacing relative overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-700">
       <div className="content-width">
@@ -37,16 +64,50 @@ const Brochure = () => {
               "Acceda a nuestra propuesta de valor completa. Explore el rigor técnico, la infraestructura y las certificaciones que garantizan el éxito de cada intervención de Multiservicios Braloa."
             </p>
             
-            <motion.a
-              href={siteContent.contact.brochureUrl}
-              download
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-6 px-14 py-7 bg-apple-green text-white font-black rounded-[2rem] shadow-[0_20px_50px_-10px_rgba(137,193,61,0.3)] hover:shadow-apple-green/50 transition-all group tracking-[0.2em] text-xs uppercase"
+            <motion.button
+              onClick={handleDownload}
+              whileHover={{ scale: downloadStatus === 'idle' ? 1.03 : 1 }}
+              whileTap={{ scale: downloadStatus === 'idle' ? 0.98 : 1 }}
+              disabled={downloadStatus === 'downloading'}
+              className={`relative inline-flex items-center gap-6 px-14 py-7 font-black rounded-[2rem] transition-all duration-500 group tracking-[0.2em] text-xs uppercase cursor-pointer overflow-hidden ${
+                downloadStatus === 'idle'
+                  ? 'bg-apple-green text-white shadow-[0_20px_50px_-10px_rgba(137,193,61,0.3)] hover:shadow-apple-green/50 hover:bg-apple-green/95'
+                  : downloadStatus === 'downloading'
+                  ? 'bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-300/10 dark:border-white/5 shadow-none'
+                  : 'bg-emerald-600 text-white shadow-[0_20px_50px_-10px_rgba(16,185,129,0.3)]'
+              }`}
             >
-              DESCARGAR PORTAFOLIO CORPORATIVO (PDF)
-              <ChevronRight size={22} className="group-hover:translate-x-2 transition-transform" />
-            </motion.a>
+              {/* Progress sliding line inside the button */}
+              {downloadStatus === 'downloading' && (
+                <motion.div 
+                  initial={{ x: '-100%' }}
+                  animate={{ x: '0%' }}
+                  transition={{ duration: 2, ease: 'easeInOut' }}
+                  className="absolute bottom-0 left-0 h-1.5 w-full bg-apple-green"
+                />
+              )}
+
+              {downloadStatus === 'idle' && (
+                <>
+                  DESCARGAR PORTAFOLIO CORPORATIVO (PDF)
+                  <Download size={20} className="group-hover:translate-y-0.5 transition-transform" />
+                </>
+              )}
+
+              {downloadStatus === 'downloading' && (
+                <>
+                  PREPARANDO PORTAFOLIO...
+                  <Loader2 size={20} className="animate-spin text-apple-green" />
+                </>
+              )}
+
+              {downloadStatus === 'success' && (
+                <>
+                  ¡PORTAFOLIO DESCARGADO!
+                  <CheckCircle2 size={20} className="text-white animate-bounce" />
+                </>
+              )}
+            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -187,32 +187,30 @@ const Contact = () => {
             </div>
 
             {/* Social Channels */}
-            <div className="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5">
+            <div className="pt-6 border-t border-slate-100 dark:border-white/5 space-y-4">
               <div>
                 <h4 className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-0.5">Canales Digitales</h4>
                 <p className="text-xs font-bold text-slate-700 dark:text-slate-300">@BRALOARODRIGUEZ</p>
               </div>
-              <div className="flex gap-2.5">
-                <motion.a 
-                  whileHover={{ scale: 1.05, y: -1 }}
-                  whileTap={{ scale: 0.95 }}
+              <div className="grid grid-cols-2 gap-4">
+                <a 
                   href={siteContent.contact.facebook} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="size-9 rounded-xl bg-blue-500/10 dark:bg-blue-500/5 text-blue-500 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all border border-blue-500/10"
+                  className="btn-digital bg-[#1877F2] text-white py-3.5 px-6 gap-3 text-[10px] tracking-widest uppercase font-black"
                 >
-                  <Facebook size={16} />
-                </motion.a>
-                <motion.a 
-                  whileHover={{ scale: 1.05, y: -1 }}
-                  whileTap={{ scale: 0.95 }}
+                  Facebook
+                  <Facebook size={16} className="transition-transform duration-300" />
+                </a>
+                <a 
                   href={`https://wa.me/${siteContent.company.whatsapp}`}
                   target="_blank" 
                   rel="noreferrer"
-                  className="size-9 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/5 text-emerald-500 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all border border-emerald-500/10"
+                  className="btn-digital bg-[#25D366] text-white py-3.5 px-6 gap-3 text-[10px] tracking-widest uppercase font-black"
                 >
-                  <MessageSquare size={16} />
-                </motion.a>
+                  WhatsApp
+                  <MessageSquare size={16} className="transition-transform duration-300" />
+                </a>
               </div>
             </div>
           </motion.div>

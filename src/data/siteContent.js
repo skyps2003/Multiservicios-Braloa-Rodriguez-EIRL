@@ -6,14 +6,14 @@ export const siteContent = {
     slogan: "Ingeniería de Confianza, Soluciones que Perduran",
     description: "Líderes en soluciones integrales para los sectores industrial, minero y gubernamental en Marcona e Ica. Fusionamos rigor técnico con calidez humana.",
     highlight: "10,000+ Horas Hombre sin accidentes (Certificado SSOMA)",
-    yearEstablished: 2017,
+    yearEstablished: 2021,
     whatsapp: "51940393414",
     whatsappLink: "https://wa.me/51940393414"
   },
   stats: [
     { label: "Horas Hombre sin Accidentes", value: "10k+", icon: "Shield" },
     { label: "Proyectos Industriales", value: "100+", icon: "HardHat" },
-    { label: "Años de Trayectoria", value: "7+", icon: "Clock" },
+    { label: "Años de Trayectoria", value: "5+", icon: "Clock" },
     { label: "Cumplimiento SSOMA", value: "100%", icon: "CheckCircle2" }
   ],
   clients: [
@@ -165,7 +165,7 @@ export const siteContent = {
     phones: ["940393414", "987524228"],
     email: "braloa_eirl@hotmail.com",
     ruc: "20602111904",
-    facebook: "https://www.facebook.com/BRALOARODRIGUEZ",
+    facebook: "https://www.facebook.com/profile.php?id=100069862716428",
     maps: "https://goo.gl/maps/...",
     brochureUrl: "/docs/Brochure_Braloa_2026.pdf"
   }

@@ -23,8 +23,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-        display: ['Outfit', 'sans-serif'],
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        display: ['Poppins', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',

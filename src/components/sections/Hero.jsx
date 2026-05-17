@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <>
-      <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-700">
+      <section id="inicio" className="relative min-h-screen flex items-center pt-24 pb-24 md:pb-32 lg:pb-40 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-700">
         
         {/* Background Image Layer - Fixed Alignment */}
         <div className="absolute inset-0 z-0">
@@ -64,11 +64,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex flex-wrap gap-6"
+              className="flex flex-wrap items-center gap-6"
             >
               <Link
                 to="/contacto"
-                className="px-12 py-6 bg-apple-green text-white rounded-2xl font-black shadow-2xl shadow-apple-green/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-4 tracking-[0.2em] text-[10px] uppercase group"
+                className="px-12 py-6 bg-apple-green text-white border border-transparent rounded-2xl font-black shadow-2xl shadow-apple-green/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-4 tracking-[0.2em] text-[10px] uppercase group"
               >
                 Cotizar Servicio
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />

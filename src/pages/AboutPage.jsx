@@ -17,7 +17,7 @@ const AboutPage = () => {
     >
       <PageHeader 
         title="Nuestra Historia"
-        description="7 años de excelencia operativa y compromiso inquebrantable en el sector industrial."
+        description="5 años de excelencia operativa y compromiso inquebrantable en el sector industrial."
         className="pt-20 pb-16 md:pt-32 md:pb-28"
       />
 
