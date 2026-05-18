@@ -17,8 +17,7 @@ export const siteContent = {
     { label: "Cumplimiento SSOMA", value: "100%", icon: "CheckCircle2" }
   ],
   clients: [
-    { name: "Shougang Hierro Perú", logo: "/img/clients/Shougang Hierro Perú.png", type: "Minería" },
-    { name: "EsSalud", logo: "/img/clients/EsSalud.png", type: "Salud" },
+    { name: "Minsa", logo: "/img/clients/minsa.png", type: "Salud" },
     { name: "Marcobre", logo: "/img/clients/Marcobre.png", type: "Minería" },
     { name: "Muni Marcona", logo: "/img/clients/Muni Marcona.png", type: "Estado" }
   ],
